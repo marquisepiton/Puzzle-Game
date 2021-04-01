@@ -1,0 +1,79 @@
+# Puzzle Slider Pseudo Code
+
+## Objective:
+
+ The user will be able to play a puzzle slider and put the puzzle in the right order. 
+
+ ## Steps: 
+
+    START: 
+    
+    1. The components are rendered
+    2. The program randomize the  order of the tile
+    3. The user pushes available the tile buttons 
+    4. The program checks if the tiles are in the right order. 
+    5. The user keeps going until the tiles are in the right order. 
+    6. The program notifies the user that they won the game. 
+
+    STOP. 
+
+## EVENTS: 
+
+    - The user clicks the tile button that are available to move: The tile tile moves into the empty space and the game checks the win conditions 
+    - User clicks on the unavailable tiles: Nothing happens 
+    - When the user starts the game: the Program randomize the tiles 
+    - When the user puts the tiles in the right order: the program notifies the user that they won the game. 
+
+
+## Object/ Classes/ Components
+
+### Components: 
+
+    - Tile (12 tiles/ 1 open & 11 Closed buttons):
+        Properties: 
+            - Number
+            - Current Position
+            - Valid move
+            - Empty
+
+    - Board (May make the app components the board )
+        properties: 
+            - 4 Columns
+            - 4 Rows
+
+
+## Functions / Methods: 
+
+
+    Function RandomizeTiles():
+    Objective: Grab each button and put it in a random slot.
+               Last slot should be empty once everything is randomize.
+
+    Useful:
+        - Math.random()
+        - Math.floor()
+        -
+
+               FILTER: Button[16] & SET: Empty to true; "Maybe I want to filter the array first"
+               FOR: every "button" in ArrayOfButtons: 
+                    RANDOMIZE: the "button" and put it in slot (0 - 15)
+               PRINT: ArrayOfButtons
+
+    Function CheckWinCondition(): 
+    Objective: Check if the puzzle meets the winning criteria;
+    What is the winning state: WinningArray [1, 2, 3, 4,
+                                             5, 6, 7, 8,
+                                             9, 10,11,12,
+                                             13,14,15,16 (Slot 16 will be empty)]
+
+    Thought: "Maybe compare the "game slots" with the winning slot." 
+
+    IF: "Game Slot" matches "WinningArray" THEN: 
+        PRINT: "You win"
+    
+
+    Function moveTile(): 
+    Objective: Allow the player to move a tile. 
+
+
+
