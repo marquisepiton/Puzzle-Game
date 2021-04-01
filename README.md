@@ -5,7 +5,7 @@ Using the react library, I create a webpage that hosts an interactive sliding pu
 
 # Skills I will showcase: 
 
-     ## Tech Stack: 
+     - Tech Stack: 
             Front End: 
             1. HTML
             2. CSS 
