@@ -1,4 +1,4 @@
-# Don't pick up the puzzle pieces, slide them
+# Don't pick up the puzzle pieces....slide them 🧩
 
 Using the react library, I create a webpage that hosts an interactive sliding puzzle.
 
@@ -13,4 +13,6 @@ Using the react library, I create a webpage that hosts an interactive sliding pu
             4. JS
             5. React 
 
+
+![](./img/puzzle.webp)
 
