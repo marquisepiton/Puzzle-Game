@@ -14,5 +14,5 @@ Using the react library, I create a webpage that hosts an interactive sliding pu
             5. React 
 
 
-![](./img/puzzle.webp)
+![](./src/img/puzzle.webp)
 
