@@ -4,7 +4,6 @@ function Tile(props) {
     props.moveTile();
   }
   return (
-   
         <button
           className="sliders"
           key={props.data}
@@ -16,9 +15,7 @@ function Tile(props) {
           index={props.index}          
         >
           {props.value}
-        </button> 
-
-       
+        </button>  
   );
 }
 export default Tile;

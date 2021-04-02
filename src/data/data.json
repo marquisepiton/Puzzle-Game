@@ -1,7 +1,7 @@
 {
     "tiles": [
         {
-            "name": "yellow",
+            
             "number": 1,
             "currentPosition": 0,
             "validMove": false,
@@ -93,10 +93,10 @@
             "empty":false
         },
         {
-            "number": 16,
+            "number": "",
             "currentPosition": 0,
             "validMove": false,
-            "empty":false
+            "empty": true
         }
     ]
 }

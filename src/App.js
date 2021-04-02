@@ -42,39 +42,59 @@ class App extends React.Component {
       16,
     ];
 
+  
+
     this.state = {
       // ./data/data.json
       data,
       // Not sure if I'm going to use this. 
       slots: [],
+    
     };
     //=================== B I N D I N G =======================================
-    this.randomizeTile = this.randomizeTile.bind(this);
+    // this.randomizeTile = this.randomizeTile.bind(this);
     this.checkWinCondition = this.checkWinCondition.bind(this);
     this.moveTile = this.moveTile.bind(this);
-    this.refreshGame = this.refreshGame.bind(this);
+   
     //==========================================================================
   }
   //=================== M E T H O D S ========================================
   // should put the tiles in random position on the start of the game.
-  randomizeTile() {
-    let slotNumber = Math.floor(Math.random() * 17);
-    this.setState({
-      data: data.tiles[slotNumber],
-    });
-  }
+
+  
+  // randomizeTile() {
+  //   let slotNumber = Math.floor(Math.random() * 17);
+  //   this.setState({
+  //     data: data.tiles[slotNumber],
+  //   });
+  // }
   // Check if all the tile position are in the right spots
-  checkWinCondition() {}
+  checkWinCondition() {
+    // compare the data array to the winning array
+    for(let i = 0; i < this.winningArray; i++){
+      // If it doesn't match, then the method will break out of the loop. 
+      if(this.state.data.tiles[i].number[i] !== this.winningArrayd[i]){
+        break;
+      // if all the loops match, then the player wins the game. 
+      }else if(this.state.data.tiles === this.winningArray ){
+        console.log("You win!!!")
+      }
+    }
+  }
   // Allow the player to move the tile
-  moveTile() {}
-  // Restarts the game
-  refreshGame() {}
+  moveTile() {
+
+
+    
+  }
   componentDidMount() {}
   componentDidUpdate() {}
   //===========================================================================
 
   render() {
     const mapHelper = (button, index) => {
+
+
       return (
         <Tile
           button={button}
@@ -83,15 +103,19 @@ class App extends React.Component {
           key={index}
           value={this.state.data.tiles[index].number}
         />
+        
       );
+      
     };
+    
     return (
       <div className="App">
         <div className="container-fluid">
           <div className="row row-cols-4 row-cols-md-4">
             {this.state.data.tiles
               .sort(() => Math.random() - 0.5)
-              .map(mapHelper)}
+              .map(mapHelper)
+              }
           </div>
         </div>
       </div>
